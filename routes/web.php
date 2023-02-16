@@ -16,4 +16,4 @@ use App\Http\Controllers\CurrencyController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/',[CurrencyController::class, 'show']);
+Route::get('/currency',[CurrencyController::class, 'show']);
