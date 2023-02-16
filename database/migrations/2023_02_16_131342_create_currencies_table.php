@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('currencies', function (Blueprint $table) {
-            $table->id();
+            $table->id('uuid');
+            $table->string('name');
+            $table->string('currency_code');
+            $table->float('exchange_rate');
             $table->timestamps();
         });
     }
